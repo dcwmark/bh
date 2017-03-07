@@ -3,7 +3,7 @@
 **/
 
 BH.app.controller('CommentCtrl', ['$scope', function($scope) {
-    console.log('CommentCtrl');
+    'use strict';
     
     var self = this;
     
