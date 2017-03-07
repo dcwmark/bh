@@ -1,15 +1,16 @@
 /* app css stylesheet */
 
 .comment-cell {
-    max-width: "99%";
+    max-width: 99%;
+    min-width: 40%;
 }
 
 .button-cell {
-    min-width: "8%";
+    min-width: 8%;
 }
 
 table {
-    width: "100%";
+    width: 100%;
 }
 
 form {
