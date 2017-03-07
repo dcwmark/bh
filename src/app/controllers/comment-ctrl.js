@@ -18,7 +18,6 @@ BH.app.controller('CommentCtrl', ['$scope', function($scope) {
         }
         if (self.mode === 'Submit') {
             self.comments.push({
-                id: self.comments.length + 1,
                 comment: self.inComment
             });
         } else {
