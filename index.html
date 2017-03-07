@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="comment">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+        content="width=device-width, height=device-height, initial-scale=1">
+
+  <title>Comment</title>
+
+  <link rel="stylesheet" href="src/app/app.css">
+</head>
+<body ng-controller="CommentCtrl as ctrl">
+
+    <table>
+        <tr ng-repeat="aComment in ctrl.comments track by $index">
+            <td class="comment-cell">{{aComment.comment}}</td>
+            <td class="button-cell">
+                <button ng-click="ctrl.modify($index)">
+                    Modify
+                </button>
+            </td>
+            <td class="button-cell">
+                <button ng-click="ctrl.remove($index)">
+                    Remove
+                </button>
+            </td>
+        </tr>
+    </table>
+
+    <form name="enterComment"
+          ng-submit="ctrl.submit()">
+        <label>Enter comments here:</label><br />
+        <input type="text"
+               autofocus
+               ng-model="ctrl.inComment"
+               required>
+        <input type="submit"
+               value="{{ctrl.mode}}"
+               ng-disabled="enterComment.$pristine || enterComment.$invalid" />
+    </form>
+
+    <script src="src/vendor/jquery-3.1.1.min.js"></script>
+    <script src="src/vendor/angular.min.js"></script>
+
+    <script src="src/app/init.js"></script>
+    <script src="src/app/app.js"></script>
+
+    <script src="src/app/controllers/comment-ctrl.js"></script>
+</body>
+</html>

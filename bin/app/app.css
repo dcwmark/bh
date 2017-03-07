@@ -1,0 +1,17 @@
+/* app css stylesheet */
+
+.comment-cell {
+    max-width: "99%";
+}
+
+.button-cell {
+    min-width: "8%";
+}
+
+table {
+    width: "100%";
+}
+
+form {
+    margin-top: 8px;
+}
