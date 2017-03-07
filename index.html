@@ -16,12 +16,14 @@
         <tr ng-repeat="aComment in ctrl.comments track by $index">
             <td class="comment-cell">{{aComment.comment}}</td>
             <td class="button-cell">
-                <button ng-click="ctrl.modify($index)">
+                <button ng-click="ctrl.modify($index)"
+                        ng-disabled="ctrl.mode === 'Modify'">
                     Modify
                 </button>
             </td>
             <td class="button-cell">
-                <button ng-click="ctrl.remove($index)">
+                <button ng-click="ctrl.remove($index)"
+                        ng-disabled="ctrl.mode === 'Modify'">
                     Remove
                 </button>
             </td>
